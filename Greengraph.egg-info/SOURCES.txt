@@ -7,6 +7,5 @@ Greengraph.egg-info/top_level.txt
 greengraph/__init__.py
 greengraph/command.py
 greengraph/graph.py
-greengraph/greengraph.py
 greengraph/map.py
 scripts/greengraph
