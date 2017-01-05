@@ -9,18 +9,19 @@ if __name__ == "__main__":
     parser.add_argument('--origin', '-o')
     parser.add_argument('--destination','-d')
     parser.add_argument('--steps', '-s')
-    parser.add_argument('--filename', '-f')
+    parser.add_argument('--filename', '-f', default='graph.png')
     arguments= parser.parse_args()
 
 
-    greeting = arguments.origin + " " + arguments.destination + " " + arguments.steps+ " " + arguments.filename
+    variables = arguments.origin + " " + arguments.destination + " " + arguments.steps+ " " + arguments.filename
  
-    print greeting
+    print variables  # Remove Testing Variables
 
 mygraph=Greengraph(arguments.origin,arguments.destination)
 data = mygraph.green_between(arguments.steps)
 
 plt.plot(data)
+plt.savefig(arguments.filename)
 plt.show()
 
 # Got it to work after removing arguments.from (turns out it's a keyword in python)
