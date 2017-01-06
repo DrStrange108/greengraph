@@ -9,3 +9,4 @@ greengraph/command.py
 greengraph/graph.py
 greengraph/map.py
 scripts/greengraph
+test/test_greengraph.py

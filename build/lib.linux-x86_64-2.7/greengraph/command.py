@@ -5,11 +5,11 @@ from greengraph import Greengraph
 from argparse import ArgumentParser
 
 def process():
-    parser = ArgumentParser(description = "Generate Graph of Green Steps")
-    parser.add_argument('--origin', '-o')
-    parser.add_argument('--destination','-d')
-    parser.add_argument('--steps', '-s')
-    parser.add_argument('--filename', '-f', default='graph.png')
+    parser = ArgumentParser(description = "Generate Graph of Green Pixels between 2 places")
+    parser.add_argument('--origin', '-o', default='London', help="Origin (default = London)")
+    parser.add_argument('--destination','-d', default= 'Coventry', help="Destination: (default = Coventry)")
+    parser.add_argument('--steps', '-s', default='20', help="Steps required - (default = 20)")
+    parser.add_argument('--filename', '-f', help="Filename output. (default graph.png if not entered)", default='graph.png')
     arguments= parser.parse_args()
 
     mygraph=Greengraph(arguments.origin,arguments.destination)

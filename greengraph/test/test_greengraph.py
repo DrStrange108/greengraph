@@ -1,6 +1,6 @@
 import yaml
 import os
-from ..greeter import greet
+from .graph import Greengraph
 from nose.tools import assert_equal
 
 def test_greeter():
